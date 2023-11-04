@@ -1,0 +1,203 @@
+#fallingGame {position:relative;width:90%;max-width:800px;height:550px;margin: 200px auto 100px;overflow:hidden;background: url('../images/oven_bg.png') center bottom / cover;border-radius:20px;box-shadow: 0 0 5px rgba(0,0,0,.5);}
+#fallingGame input {display: none;}
+#fallingGame label {cursor:pointer;}
+#fallingGame > label[for="fallStart"] {position:absolute;top:420px;left: calc(50% - 75px);z-index:1;width:150px;height:60px;background: linear-gradient(to bottom,#ffc900,#e29600);border: 2px solid #5a2d00 !important;border-radius:20px;box-shadow: inset 0 -3px rgba(0,0,0,0.2);animation:fire infinite .2s alternate linear;}
+#fallingGame > label[for="fallStart"] > span {position:absolute; top:50%;left:50%;transform:translate(-50%,-50%);width:100%;color: white;font-size:36px;}
+#fallingGame > label[for="fallStart"] > span:before {content:'PLAY';position:absolute;top:0;left: 0;z-index:-1;width:100%;-webkit-text-stroke-width: 5px !important; -webkit-text-stroke-color:#5a2d00 !important;}
+#fallingGame > .start {position:absolute;top:0;left:0;width:100%;height:100%;background: rgba(0,0,0,.4);}
+#fallingGame > .start > p {position:absolute; top:20px;left:0;z-index:1;width:100%;height:100px;background:url('../images/game_title.png') no-repeat center / contain;}
+#fallingGame > .start > div {position:absolute; top:100px; left:50%;transform:translateX(-50%);max-width:310px;width:100%;height:300px;overflow:hidden;border:5px solid #703e09;border-radius:30px;}
+#fallingGame > .start > div > label {position:absolute; top: calc(155px - 20px);}
+#fallingGame > .start > div > label[for^="right"] {background:url('../images/arrows_next.png') no-repeat center /contain;animation: right infinite 1s alternate linear;}
+#fallingGame > .start > div > label[for^="left"] {background:url('../images/arrows_prev.png') no-repeat center /contain;animation: left infinite 1s alternate linear;}
+#fallingGame > .start > div > label[for="right1"] {right:5px;width:40px;height:40px;}
+#fallingGame > .start > div > label[for="left1"] {left:5px;}
+#fallingGame > .start > div > label[for="right2"] {right:5px;}
+#fallingGame > .start > div > label[for="left2"] {left:5px;}
+#fallingGame > .start > div > div[class^="ex"]{position:absolute;top:0;z-index:-2;width:100%;height:100%;transition:1s;}
+#fallingGame > .start > div > .ex1 {left:0;background:url('../images/ex1.png') no-repeat center / cover;}
+#fallingGame > .start > div > .ex2 {left:100%;background:url('../images/ex2.png') no-repeat center / cover;}
+#fallingGame > .start > div > .ex3 {left:200%;background:url('../images/ex3.png') no-repeat center / cover;}
+/* 문제 */
+#fallingGame > .play > label {position:absolute;top:-60px;width:60px;height:60px;transition: transform 3s;}
+#fallingGame > .play > label[for$="1"] {left:5%;animation: fall linear 5s both paused;}
+#fallingGame > .play > label[for$="1"], label[for="head1"]:before {background:url('../images/cookie1.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="2"] {left:35%;animation: fall 1 linear 5s 4s both paused;}
+#fallingGame > .play > label[for$="2"], label[for="head2"]:before {background:url('../images/cookie2.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="3"] {left:65%;animation: fall linear 5s 8s both paused;}
+#fallingGame > .play > label[for$="3"], label[for="head3"]:before {background:url('../images/cookie3.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="4"] {left:45%;animation: fall linear 5s 12s both paused;}
+#fallingGame > .play > label[for$="4"], label[for="head4"]:before {background:url('../images/cookie4.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="5"] {left:80%;animation: fall linear 5s 16s both paused;}
+#fallingGame > .play > label[for$="5"], label[for="head5"]:before {background:url('../images/cookie5.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="6"] {left:15%;animation: fall linear 5s 20s both paused;}
+#fallingGame > .play > label[for$="6"], label[for="head6"]:before {background:url('../images/cookie6.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="7"] {left:55%;animation: fall linear 5s 24s both paused;}
+#fallingGame > .play > label[for$="7"], label[for="head7"]:before {background:url('../images/cookie7.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="8"] {left:70%;animation: fall linear 5s 28s both paused;}
+#fallingGame > .play > label[for$="8"], label[for="head8"]:before {background:url('../images/cookie8.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="9"] {left:25%;animation: fall linear 5s 32s both paused;}
+#fallingGame > .play > label[for$="9"], label[for="head9"]:before {background:url('../images/cookie9.png') no-repeat center / contain;}
+#fallingGame > .play > label[for$="10"] {right:5%;animation: fall linear 5s 36s both paused;}
+#fallingGame > .play > label[for$="10"], label[for="head10"]:before {background:url('../images/cookie10.png') no-repeat center / contain;}
+#fallingGame > .play > div[class*="test"] {position:absolute; top:500px;z-index:8;width:100%;}
+.test1, .test2, .test3, .test4, .test5, .test6, .test7, .test8, .test9, .test10,
+.angel-test2, .angel-test3, .angel-test4, .angel-test5, .angel-test6, .angel-test7, .angel-test8, .angel-test9, .angel-test10,
+.milk-test3, .milk-test4, .milk-test5, .milk-test6, .milk-test7, .milk-test8, .milk-test9, .milk-test10,
+.moon-test4, .moon-test5, .moon-test6, .moon-test7, .moon-test8, .moon-test9, .moon-test10,
+.spark-test5, .spark-test6, .spark-test7, .spark-test8, .spark-test9, .spark-test10,
+.princ-test6, .princ-test7, .princ-test8, .princ-test9, .princ-test10,
+.sorbet-test7, .sorbet-test8, .sorbet-test9, .sorbet-test10,
+.mint-test8, .mint-test9, .mint-test10,
+.fox-test9, .fox-test10,
+.chee-test10
+{visibility:hidden;}
+div[class*="1"] {animation: goaway 5s linear both paused;}
+div[class*="2"] {animation: goaway 5s 4s linear both paused;}
+div[class*="3"] {animation: goaway 5s 8s linear both paused;}
+div[class*="4"] {animation: goaway 5s 12s linear both paused;}
+div[class*="5"] {animation: goaway 5s 16s linear both paused;}
+div[class*="6"] {animation: goaway 5s 20s linear both paused;}
+div[class*="7"] {animation: goaway 5s 24s linear both paused;}
+div[class*="8"] {animation: goaway 5s 28s linear both paused;}
+div[class*="9"] {animation: goaway 5s 32s linear both paused;}
+div[class*="10"] {animation: goaway 5s 36s linear both paused;}
+#fallingGame > .play > div[class*="test"] > label {color:#f3b700 !important;font-size:20px;}
+#fallingGame > .play > div[class*="test"] > label:nth-child(2) {padding: 0 10px;}
+/* 오븐 불 */
+#fallingGame > .fire {position:absolute;bottom:0;left:0;z-index:7;width:100%;height:78px;background: url('../images/fire.png') repeat-x bottom / contain;animation: fire infinite .5s linear alternate paused;}
+/* 체력바 */
+#fallingGame > .timebar {visibility:hidden;}
+#fallingGame > .timebar > div:first-child {position:absolute;top:18px;left:70px;width: calc(100% - 90px);height:19px;background:rgba(0,0,0,.6);border-radius: 10px;}
+#fallingGame > .timebar > div:nth-child(2) {position:absolute;top:20px;left:70px;width: calc(100% - 90px);height:15px;background:linear-gradient(to right,#FC6209,#FECA11) fixed;box-shadow:inset 0 2px 3px rgba(255,253,200,.5),inset 0 -2px 5px rgba(235,63,33,.5);animation:time 42s linear both paused;border-radius: 10px;}
+#fallingGame > .timebar > div:nth-child(3) {position:absolute;top:5px;left:5px;width:90px;height:50px;background:url('../images/crob_logo.png') no-repeat center /contain;}
+/* 체력바 끝 */
+#fallingGame > .timeout {position:absolute;top:0;left:0;z-index:8;width:100%;height:100%;background:url('../images/fail_bg.png') no-repeat center / cover; visibility:hidden;animation: vis 1s 41s linear both paused;}
+#fallingGame > .timeout > div:first-child {position:absolute; top:0;left:0;width:100%;height:300px;background:url('../images/fail_tit.png') no-repeat center / contain;}
+#fallingGame > .timeout > div:nth-child(2) {position:absolute; bottom:0;left:0;width:100%;height:200px;}
+#fallingGame > .timeout > div a img, .fail > div a img {pointer-events: none;}
+/* 오답 */
+.fail {position:absolute;top:0;left:0;z-index:9;width:100%;height:100%;background:url('../images/fail_bg.png') no-repeat center / cover; animation:vis 1s 1s linear both paused;visibility:hidden;}
+.fail > div:first-child {position:absolute; top:0;left:0;width:100%;height:300px;background:url('../images/fail_tit2.png') no-repeat center / contain;}
+.fail > div:nth-child(2) {position:absolute; bottom:0;left:0;width:100%;height:200px;}
+.fail > div a img {pointer-events: none;}
+/* 정답 */
+#fallingGame > .play > label[for^="angel"], #fallingGame > .play > label[for^="milk"],
+#fallingGame > .play > label[for^="moon"], #fallingGame > .play > label[for^="spark"],
+#fallingGame > .play > label[for^="princ"], #fallingGame > .play > label[for^="sorbet"],
+#fallingGame > .play > label[for^="mint"], #fallingGame > .play > label[for^="fox"],
+#fallingGame > .play > label[for^="chee"]  {visibility:hidden;}
+/* 탈출 */
+.onb {position:absolute;top:0;left:0;z-index:10;width:100%;height:100%;background:url('../images/success_tit.png') no-repeat center top / auto 300px, url('../images/success_bg.png') no-repeat left bottom / cover, url('../images/oven_bg.png') center bottom / cover;animation:vis 1s 1s linear both paused;visibility:hidden;}
+.onb > div:nth-child(1) {position:absolute; top:220px;left:0;width:100%;}
+.onb > div > p {font-size:30px;color:white;-webkit-text-stroke-width: 1px !important; -webkit-text-stroke-color:#5a2d00 !important;}
+.onb > div:nth-child(2) {position:absolute; bottom:0; left:0;width:100%;height:200px;}
+#mArticle .onb > div:nth-child(1) {position:absolute; top:180px;left:0;width:100%;}
+#mArticle .onb > div:nth-child(2) {position:absolute; top:250px; left:0;width:100%;height:200px;}
+/* input:checked */
+#fallStart:checked ~ .timeout {animation-play-state:running;}
+#fallStart:checked + label, #fallStart:checked ~ .start {display:none;}
+#fallStart:checked ~ .timebar {visibility:visible;}
+#fallStart:checked ~ .play > label, #fallStart:checked ~ .play > div[class*="test"], #fallStart:checked ~ .timebar > div:nth-child(2), #fallStart:checked ~ .fire {animation-play-state: running;}
+#right1:checked ~ label[for="right1"] {display:none;}
+#right1:checked ~ div[class^="ex"] {transform:translateX(-100%);}
+#right1:checked ~ label[for="left1"] {width:40px;height:40px;}
+#right1:checked ~ label[for="right2"] {width:40px;height:40px;}
+#right2:checked ~ div[class^="ex"] {transform:translateX(-200%);}
+#right2:checked ~ label[for="left2"] {width:40px;height:40px;}
+#right2:checked ~ label[for="right2"] {display:none;}
+
+#head1:checked ~ .test1, #head2:checked ~ .test2, #head3:checked ~ .test3,
+#head4:checked ~ .test4, #head5:checked ~ .test5, #head6:checked ~ .test6,
+#head7:checked ~ .test7, #head8:checked ~ .test8, #head9:checked ~ .test9,
+#head10:checked ~ .test10 {visibility:visible;}
+
+/* 엔젤 체크 */
+#brave-succ:checked ~ label[for^="angel"] {visibility:visible;}
+#angel2:checked ~ .angel-test2, #angel3:checked ~ .angel-test3,
+#angel4:checked ~ .angel-test4, #angel5:checked ~ .angel-test5, #angel6:checked ~ .angel-test6,
+#angel7:checked ~ .angel-test7, #angel8:checked ~ .angel-test8, #angel9:checked ~ .angel-test9, #angel10:checked ~ .angel-test10 {visibility:visible;animation-play-state:running;}
+/* 밀크 체크 */
+#ang-angel-succ:checked ~ label[for^="milk"] {visibility:visible;}
+#milk3:checked ~ .milk-test3, #milk4:checked ~ .milk-test4,
+#milk5:checked ~ .milk-test5, #milk6:checked ~ .milk-test6,
+#milk7:checked ~ .milk-test7, #milk8:checked ~ .milk-test8, 
+#milk9:checked ~ .milk-test9, #milk10:checked ~ .milk-test10 {visibility:visible;animation-play-state:running;}
+/* 문 체크 */
+#mk-milk-succ:checked ~ label[for^="moon"] {visibility:visible;}
+#moon4:checked ~ .moon-test4,#moon5:checked ~ .moon-test5, #moon6:checked ~ .moon-test6,
+#moon7:checked ~ .moon-test7, #moon8:checked ~ .moon-test8, #moon9:checked ~ .moon-test9, #moon10:checked ~ .moon-test10 {visibility:visible;animation-play-state:running;}
+/* 꼴링 체크 */
+#mn-moon-succ:checked ~ label[for^="spark"] {visibility:visible;}
+#spark5:checked ~ .spark-test5, #spark6:checked ~ .spark-test6, #spark7:checked ~ .spark-test7, #spark8:checked ~ .spark-test8, #spark9:checked ~ .spark-test9, #spark10:checked ~ .spark-test10 {visibility:visible;animation-play-state:running;}
+/* 프린세스 */
+#sp-spark-succ:checked ~ label[for^="princ"] {visibility:visible;}
+#princ6:checked ~ .princ-test6, #princ7:checked ~ .princ-test7, #princ8:checked ~ .princ-test8,
+#princ9:checked ~ .princ-test9, #princ10:checked ~ .princ-test10 {visibility:visible;animation-play-state:running;}
+/* 소르베 */
+#pr-princ-succ:checked ~ label[for^="sorbet"] {visibility:visible;}
+#sorbet7:checked ~ .sorbet-test7, #sorbet8:checked ~ .sorbet-test8,
+#sorbet9:checked ~ .sorbet-test9, #sorbet10:checked ~ .sorbet-test10 {visibility:visible;animation-play-state:running;}
+/* 민초 */
+#sr-sorb-succ:checked ~ label[for^="mint"] {visibility:visible;}
+#mint8:checked ~ .mint-test8, #mint9:checked ~ .mint-test9, #mint10:checked ~ .mint-test10 {visibility:visible;animation-play-state:running;}
+/* 폭스 */
+#mt-mint-succ:checked ~ label[for^="fox"] {visibility:visible;}
+#fox9:checked ~ .fox-test9, #fox10:checked ~ .fox-test10 {visibility:visible;animation-play-state:running;}
+/* 치케 */
+#fx-fox-succ:checked ~ label[for^="chee"] {visibility:visible;}
+#chee10:checked ~ .chee-test10 {visibility:visible;animation-play-state:running;}
+/* 실패 css */
+label[for="head1"]:before, label[for="head2"]:before, label[for="head2"]:before, label[for="head3"]:before, label[for="head4"]:before, label[for="head5"]:before, label[for="head6"]:before, label[for="head7"]:before, label[for="head8"]:before, label[for="head9"]:before {content:'';position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
+label[for="head10"]:before {content:'';position:absolute;top:0;right:0;width:100%;height:100%;opacity:0;}
+input[id*="brave-fail"]:checked ~ label[for$="1"], input[id*="angel-fail"]:checked ~ label[for$="2"],
+input[id*="milk-fail"]:checked ~ label[for$="3"], input[id*="moon-fail"]:checked ~ label[for$="4"],
+input[id*="spark-fail"]:checked ~ label[for$="5"], input[id*="princ-fail"]:checked ~ label[for$="6"],
+input[id*="sorb-fail1"]:checked ~ label[for$="7"], input[id*="mint-fail"]:checked ~ label[for$="8"],
+input[id*="fox-fail"]:checked ~ label[for$="9"], input[id*="chee-fail"]:checked ~ label[for$="10"] {width:0 !important;height:0 !important;}
+input[id*="sorb-fail2"]:checked ~ label[for$="7"] {width:70px !important; height: 70px !important;background:url('../images/egg.png') no-repeat center / contain !important;animation:shake infinite .05s alternate linear;}
+input[id*="brave-fail"]:checked ~ label[for="head1"]:before,
+input[id*="angel-fail"]:checked ~ label[for="head2"]:before,
+input[id*="milk-fail"]:checked ~ label[for="head3"]:before,
+input[id*="moon-fail"]:checked ~ label[for="head4"]:before,
+input[id*="spark-fail"]:checked ~ label[for="head5"]:before,
+input[id*="princ-fail"]:checked ~ label[for="head6"]:before,
+input[id*="sorb-fail1"]:checked ~ label[for="head7"]:before,
+input[id*="mint-fail"]:checked ~ label[for="head8"]:before,
+input[id*="fox-fail"]:checked ~ label[for="head9"]:before,
+input[id*="chee-fail"]:checked ~ label[for="head10"]:before {width:60px !important;height:60px;opacity:1;animation:shake infinite .05s alternate linear;}
+/* 성공 css */
+input[id*="brave-succ"]:checked ~ label[for="head1"] {background:url('../images/up1.png') no-repeat center / contain !important;width:70px !important;height:90px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="angel-succ"]:checked ~ label[for$="2"]{background:url('../images/up2.png') no-repeat center / contain !important;height:60px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="milk-succ"]:checked ~ label[for$="3"] {background:url('../images/up3.png') no-repeat center / contain !important;width: 70px !important;height: 70px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="moon-succ"]:checked ~ label[for$="4"] {background:url('../images/up4.png') no-repeat center / contain !important;width:80px !important;height:100px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="spark-succ"]:checked ~ label[for$="5"] {background:url('../images/up5.png') no-repeat center / contain !important;width: 70px !important;height: 70px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="princ-succ"]:checked ~ label[for$="6"] {background:url('../images/up6.png') no-repeat center / contain !important;width: 70px !important;height: 70px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="sorb-succ"]:checked ~ label[for$="7"] {background:url('../images/up7.png') no-repeat center / contain !important;width: 70px !important;height: 70px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="mint-succ"]:checked ~ label[for$="8"] {background:url('../images/up8.png') no-repeat center / contain !important;width: 70px !important;height: 70px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="fox-succ"]:checked ~ label[for$="9"] {background:url('../images/up9.png') no-repeat center / contain !important;width: 70px !important;height: 70px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+input[id*="chee-succ"]:checked ~ label[for$="10"] {background:url('../images/up10.png') no-repeat center / contain !important;width: 70px !important;height: 70px !important;transform:translateY(-700px) !important;animation-play-state:paused !important;}
+/* 치케 실패 시 */
+input[id="chee-succ"]:checked ~ .fail,
+input[id*="ang-chee-succ"]:checked ~ .fail,
+input[id*="mk-chee-succ"]:checked ~ .fail
+input[id*="mn-chee-succ"]:checked ~ .fail
+input[id*="sp-chee-succ"]:checked ~ .fail
+input[id*="pr-chee-succ"]:checked ~ .fail
+input[id*="sr-chee-succ"]:checked ~ .fail
+input[id*="mt-chee-succ"]:checked ~ .fail,
+input[id*="fx-chee-succ"]:checked ~ .fail,
+input[id*="chee-fail1"]:checked ~ .fail,
+input[id*="chee-fail2"]:checked ~ .fail{animation-play-state:running;}
+/* 치케 성공 시 */
+#ch-chee-succ:checked ~ .onb {animation-play-state:running;}
+/* animation */
+@keyframes fall {100% {top:100%;}}
+@keyframes goaway {95% {opacity:1;} 100% {opacity:0;visibility:hidden;}}
+@keyframes shake { 50% {transform:rotate(-10deg);} 100% {transform:rotate(10deg);}}
+@keyframes jump {100% {top:-60px;}}
+@keyframes time {100% {width:0;}}
+@keyframes vis {99% {visibility:hidden;} 100% {visibility:visible;}}
+@keyframes fire {100% {transform: scale(1.02);}}
+@keyframes left {100% {transform: translateX(-5px);}}
+@keyframes right {100% {transform: translateX(5px);}}

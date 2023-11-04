@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캐릭터 이름 맞히기</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="fallingGame">
+        <input type="radio" id="fallStart">
+        <label for="fallStart">
+          <span>PLAY</span>
+        </label>
+        <div class="start">
+          <p></p>
+          <div>
+            <input type="radio" name="slide1" id="right1">
+            <input type="radio" name="slide1" id="left1">
+            <input type="radio" name="slide2" id="right2">
+            <input type="radio" name="slide2" id="left2">
+            <label for="right1"></label>
+            <label for="left1"></label>
+            <label for="right2"></label>
+            <label for="left2"></label>
+            <div class="ex1"></div>
+            <div class="ex2"></div>
+            <div class="ex3"></div>
+          </div>
+        </div>
+        <div class="play">
+          <input type="radio" name="falling-head" id="head1">
+          <input type="radio" name="falling-head" id="head2">
+          <input type="radio" name="falling-head" id="head3">
+          <input type="radio" name="falling-head" id="head4">
+          <input type="radio" name="falling-head" id="head5">
+          <input type="radio" name="falling-head" id="head6">
+          <input type="radio" name="falling-head" id="head7">
+          <input type="radio" name="falling-head" id="head8">
+          <input type="radio" name="falling-head" id="head9">
+          <input type="radio" name="falling-head" id="head10">
+          <input type="radio" name="brave-test" id="brave-fail1">
+          <input type="radio" name="brave-test" id="brave-succ">
+          <input type="radio" name="brave-test" id="brave-fail2">
+          <input type="radio" name="angel-test" id="angel-fail1">
+          <input type="radio" name="angel-test" id="angel-fail2">
+          <input type="radio" name="angel-test" id="angel-succ">
+          <input type="radio" name="milk-test" id="milk-fail1">
+          <input type="radio" name="milk-test" id="milk-succ">
+          <input type="radio" name="milk-test" id="milk-fail2">
+          <input type="radio" name="moon-test" id="moon-succ">
+          <input type="radio" name="moon-test" id="moon-fail1">
+          <input type="radio" name="moon-test" id="moon-fail2">
+          <input type="radio" name="spark-test" id="spark-fail1">
+          <input type="radio" name="spark-test" id="spark-fail2">
+          <input type="radio" name="spark-test" id="spark-succ">
+          <input type="radio" name="princ-test" id="princ-succ">
+          <input type="radio" name="princ-test" id="princ-fail1">
+          <input type="radio" name="princ-test" id="princ-fail2">
+          <input type="radio" name="sorb-test" id="sorb-fail1">
+          <input type="radio" name="sorb-test" id="sorb-succ">
+          <input type="radio" name="sorb-test" id="sorb-fail2">
+          <input type="radio" name="mint-test" id="mint-fail1">
+          <input type="radio" name="mint-test" id="mint-fail2">
+          <input type="radio" name="mint-test" id="mint-succ">
+          <input type="radio" name="fox-test" id="fox-succ">
+          <input type="radio" name="fox-test" id="fox-fail1">
+          <input type="radio" name="fox-test" id="fox-fail2">
+          <input type="radio" name="chee-test" id="chee-fail1">
+          <input type="radio" name="chee-test" id="chee-succ">
+          <input type="radio" name="chee-test" id="chee-fail2">
+          <!--천사 정답-->
+          <input type="radio" name="angel-head" id="angel2">
+          <input type="radio" name="angel-head" id="angel3">
+          <input type="radio" name="angel-head" id="angel4">
+          <input type="radio" name="angel-head" id="angel5">
+          <input type="radio" name="angel-head" id="angel6">
+          <input type="radio" name="angel-head" id="angel7">
+          <input type="radio" name="angel-head" id="angel8">
+          <input type="radio" name="angel-head" id="angel9">
+          <input type="radio" name="angel-head" id="angel10">
+          <input type="radio" name="ang-angel-test" id="ang-angel-fail1">
+          <input type="radio" name="ang-angel-test" id="ang-angel-fail2">
+          <input type="radio" name="ang-angel-test" id="ang-angel-succ">
+          <input type="radio" name="ang-milk-test" id="ang-milk-fail1">
+          <input type="radio" name="ang-milk-test" id="ang-milk-succ">
+          <input type="radio" name="ang-milk-test" id="ang-milk-fail2">
+          <input type="radio" name="ang-moon-test" id="ang-moon-succ">
+          <input type="radio" name="ang-moon-test" id="ang-moon-fail1">
+          <input type="radio" name="ang-moon-test" id="ang-moon-fail2">
+          <input type="radio" name="ang-spark-test" id="ang-spark-fail1">
+          <input type="radio" name="ang-spark-test" id="ang-spark-fail2">
+          <input type="radio" name="ang-spark-test" id="ang-spark-succ">
+          <input type="radio" name="ang-princ-test" id="ang-princ-succ">
+          <input type="radio" name="ang-princ-test" id="ang-princ-fail1">
+          <input type="radio" name="ang-princ-test" id="ang-princ-fail2">
+          <input type="radio" name="ang-sorb-test" id="ang-sorb-fail1">
+          <input type="radio" name="ang-sorb-test" id="ang-sorb-succ">
+          <input type="radio" name="ang-sorb-test" id="ang-sorb-fail2">
+          <input type="radio" name="ang-mint-test" id="ang-mint-fail1">
+          <input type="radio" name="ang-mint-test" id="ang-mint-fail2">
+          <input type="radio" name="ang-mint-test" id="ang-mint-succ">
+          <input type="radio" name="ang-fox-test" id="ang-fox-succ">
+          <input type="radio" name="ang-fox-test" id="ang-fox-fail1">
+          <input type="radio" name="ang-fox-test" id="ang-fox-fail2">
+          <input type="radio" name="ang-chee-test" id="ang-chee-fail1">
+          <input type="radio" name="ang-chee-test" id="ang-chee-succ">
+          <input type="radio" name="ang-chee-test" id="ang-chee-fail2">
+          <!--우유 정답-->
+          <input type="radio" name="milk-head" id="milk3">
+          <input type="radio" name="milk-head" id="milk4">
+          <input type="radio" name="milk-head" id="milk5">
+          <input type="radio" name="milk-head" id="milk6">
+          <input type="radio" name="milk-head" id="milk7">
+          <input type="radio" name="milk-head" id="milk8">
+          <input type="radio" name="milk-head" id="milk9">
+          <input type="radio" name="milk-head" id="milk10">
+          <input type="radio" name="mk-milk-test" id="mk-milk-fail1">
+          <input type="radio" name="mk-milk-test" id="mk-milk-succ">
+          <input type="radio" name="mk-milk-test" id="mk-milk-fail2">
+          <input type="radio" name="mk-moon-test" id="mk-moon-succ">
+          <input type="radio" name="mk-moon-test" id="mk-moon-fail1">
+          <input type="radio" name="mk-moon-test" id="mk-moon-fail2">
+          <input type="radio" name="mk-spark-test" id="mk-spark-fail1">
+          <input type="radio" name="mk-spark-test" id="mk-spark-fail2">
+          <input type="radio" name="mk-spark-test" id="mk-spark-succ">
+          <input type="radio" name="mk-princ-test" id="mk-princ-succ">
+          <input type="radio" name="mk-princ-test" id="mk-princ-fail1">
+          <input type="radio" name="mk-princ-test" id="mk-princ-fail2">
+          <input type="radio" name="mk-sorb-test" id="mk-sorb-fail1">
+          <input type="radio" name="mk-sorb-test" id="mk-sorb-succ">
+          <input type="radio" name="mk-sorb-test" id="mk-sorb-fail2">
+          <input type="radio" name="mk-mint-test" id="mk-mint-fail1">
+          <input type="radio" name="mk-mint-test" id="mk-mint-fail2">
+          <input type="radio" name="mk-mint-test" id="mk-mint-succ">
+          <input type="radio" name="mk-fox-test" id="mk-fox-succ">
+          <input type="radio" name="mk-fox-test" id="mk-fox-fail1">
+          <input type="radio" name="mk-fox-test" id="mk-fox-fail2">
+          <input type="radio" name="mk-chee-test" id="mk-chee-fail1">
+          <input type="radio" name="mk-chee-test" id="mk-chee-succ">
+          <input type="radio" name="mk-chee-test" id="mk-chee-fail2">
+          <!--달술 정답-->
+          <input type="radio" name="moon-head" id="moon4">
+          <input type="radio" name="moon-head" id="moon5">
+          <input type="radio" name="moon-head" id="moon6">
+          <input type="radio" name="moon-head" id="moon7">
+          <input type="radio" name="moon-head" id="moon8">
+          <input type="radio" name="moon-head" id="moon9">
+          <input type="radio" name="moon-head" id="moon10">
+          <input type="radio" name="mn-moon-test" id="mn-moon-succ">
+          <input type="radio" name="mn-moon-test" id="mn-moon-fail1">
+          <input type="radio" name="mn-moon-test" id="mn-moon-fail2">
+          <input type="radio" name="mn-spark-test" id="mn-spark-fail1">
+          <input type="radio" name="mn-spark-test" id="mn-spark-fail2">
+          <input type="radio" name="mn-spark-test" id="mn-spark-succ">
+          <input type="radio" name="mn-princ-test" id="mn-princ-succ">
+          <input type="radio" name="mn-princ-test" id="mn-princ-fail1">
+          <input type="radio" name="mn-princ-test" id="mn-princ-fail2">
+          <input type="radio" name="mn-sorb-test" id="mn-sorb-fail1">
+          <input type="radio" name="mn-sorb-test" id="mn-sorb-succ">
+          <input type="radio" name="mn-sorb-test" id="mn-sorb-fail2">
+          <input type="radio" name="mn-mint-test" id="mn-mint-fail1">
+          <input type="radio" name="mn-mint-test" id="mn-mint-fail2">
+          <input type="radio" name="mn-mint-test" id="mn-mint-succ">
+          <input type="radio" name="mn-fox-test" id="mn-fox-succ">
+          <input type="radio" name="mn-fox-test" id="mn-fox-fail1">
+          <input type="radio" name="mn-fox-test" id="mn-fox-fail2">
+          <input type="radio" name="mn-chee-test" id="mn-chee-fail1">
+          <input type="radio" name="mn-chee-test" id="mn-chee-succ">
+          <input type="radio" name="mn-chee-test" id="mn-chee-fail2">
+          <!--꼴링 정답-->
+          <input type="radio" name="spark-head" id="spark5">
+          <input type="radio" name="spark-head" id="spark6">
+          <input type="radio" name="spark-head" id="spark7">
+          <input type="radio" name="spark-head" id="spark8">
+          <input type="radio" name="spark-head" id="spark9">
+          <input type="radio" name="spark-head" id="spark10">
+          <input type="radio" name="sp-spark-test" id="sp-spark-fail1">
+          <input type="radio" name="sp-spark-test" id="sp-spark-fail2">
+          <input type="radio" name="sp-spark-test" id="sp-spark-succ">
+          <input type="radio" name="sp-princ-test" id="sp-princ-succ">
+          <input type="radio" name="sp-princ-test" id="sp-princ-fail1">
+          <input type="radio" name="sp-princ-test" id="sp-princ-fail2">
+          <input type="radio" name="sp-sorb-test" id="sp-sorb-fail1">
+          <input type="radio" name="sp-sorb-test" id="sp-sorb-succ">
+          <input type="radio" name="sp-sorb-test" id="sp-sorb-fail2">
+          <input type="radio" name="sp-mint-test" id="sp-mint-fail1">
+          <input type="radio" name="sp-mint-test" id="sp-mint-fail2">
+          <input type="radio" name="sp-mint-test" id="sp-mint-succ">
+          <input type="radio" name="sp-fox-test" id="sp-fox-succ">
+          <input type="radio" name="sp-fox-test" id="sp-fox-fail1">
+          <input type="radio" name="sp-fox-test" id="sp-fox-fail2">
+          <input type="radio" name="sp-chee-test" id="sp-chee-fail1">
+          <input type="radio" name="sp-chee-test" id="sp-chee-succ">
+          <input type="radio" name="sp-chee-test" id="sp-chee-fail2">
+          <!--공주 정답-->
+          <input type="radio" name="princ-head" id="princ6">
+          <input type="radio" name="princ-head" id="princ7">
+          <input type="radio" name="princ-head" id="princ8">
+          <input type="radio" name="princ-head" id="princ9">
+          <input type="radio" name="princ-head" id="princ10">
+          <input type="radio" name="pr-princ-test" id="pr-princ-succ">
+          <input type="radio" name="pr-princ-test" id="pr-princ-fail1">
+          <input type="radio" name="pr-princ-test" id="pr-princ-fail2">
+          <input type="radio" name="pr-sorb-test" id="pr-sorb-fail1">
+          <input type="radio" name="pr-sorb-test" id="pr-sorb-succ">
+          <input type="radio" name="pr-sorb-test" id="pr-sorb-fail2">
+          <input type="radio" name="pr-mint-test" id="pr-mint-fail1">
+          <input type="radio" name="pr-mint-test" id="pr-mint-fail2">
+          <input type="radio" name="pr-mint-test" id="pr-mint-succ">
+          <input type="radio" name="pr-fox-test" id="pr-fox-succ">
+          <input type="radio" name="pr-fox-test" id="pr-fox-fail1">
+          <input type="radio" name="pr-fox-test" id="pr-fox-fail2">
+          <input type="radio" name="pr-chee-test" id="pr-chee-fail1">
+          <input type="radio" name="pr-chee-test" id="pr-chee-succ">
+          <input type="radio" name="pr-chee-test" id="pr-chee-fail2">
+          <!--샤벳 정답-->
+          <input type="radio" name="sorbet-head" id="sorbet7">
+          <input type="radio" name="sorbet-head" id="sorbet8">
+          <input type="radio" name="sorbet-head" id="sorbet9">
+          <input type="radio" name="sorbet-head" id="sorbet10">
+          <input type="radio" name="sr-sorb-test" id="sr-sorb-fail1">
+          <input type="radio" name="sr-sorb-test" id="sr-sorb-succ">
+          <input type="radio" name="sr-sorb-test" id="sr-sorb-fail2">
+          <input type="radio" name="sr-mint-test" id="sr-mint-fail1">
+          <input type="radio" name="sr-mint-test" id="sr-mint-fail2">
+          <input type="radio" name="sr-mint-test" id="sr-mint-succ">
+          <input type="radio" name="sr-fox-test" id="sr-fox-succ">
+          <input type="radio" name="sr-fox-test" id="sr-fox-fail1">
+          <input type="radio" name="sr-fox-test" id="sr-fox-fail2">
+          <input type="radio" name="sr-chee-test" id="sr-chee-fail1">
+          <input type="radio" name="sr-chee-test" id="sr-chee-succ">
+          <input type="radio" name="sr-chee-test" id="sr-chee-fail2">
+          <!--민초 정답-->
+          <input type="radio" name="mint-head" id="mint8">
+          <input type="radio" name="mint-head" id="mint9">
+          <input type="radio" name="mint-head" id="mint10">
+          <input type="radio" name="mt-mint-test" id="mt-mint-fail1">
+          <input type="radio" name="mt-mint-test" id="mt-mint-fail2">
+          <input type="radio" name="mt-mint-test" id="mt-mint-succ">
+          <input type="radio" name="mt-fox-test" id="mt-fox-succ">
+          <input type="radio" name="mt-fox-test" id="mt-fox-fail1">
+          <input type="radio" name="mt-fox-test" id="mt-fox-fail2">
+          <input type="radio" name="mt-chee-test" id="mt-chee-fail1">
+          <input type="radio" name="mt-chee-test" id="mt-chee-succ">
+          <input type="radio" name="mt-chee-test" id="mt-chee-fail2">
+          <!--구미호 정답-->
+          <input type="radio" name="fox-head" id="fox9">
+          <input type="radio" name="fox-head" id="fox10">
+          <input type="radio" name="fx-fox-test" id="fx-fox-succ">
+          <input type="radio" name="fx-fox-test" id="fx-fox-fail1">
+          <input type="radio" name="fx-fox-test" id="fx-fox-fail2">
+          <input type="radio" name="fx-chee-test" id="fx-chee-fail1">
+          <input type="radio" name="fx-chee-test" id="fx-chee-succ">
+          <input type="radio" name="fx-chee-test" id="fx-chee-fail2">
+          <!--치케 정답-->
+          <input type="radio" name="chee-head" id="chee10">
+          <input type="radio" name="ch-chee-test" id="ch-chee-fail1">
+          <input type="radio" name="ch-chee-test" id="ch-chee-succ">
+          <input type="radio" name="ch-chee-test" id="ch-chee-fail2">
+          
+          <div class="onb"></div>
+          <div class="fail">
+            <div></div>
+          </div>
+          
+          <label for="head1"></label>
+          <div class="test1">
+            <label for="brave-fail1">1. 겁쟁이 쿠키</label>
+            <label for="brave-succ">2. 용감한 쿠키</label>
+            <label for="brave-fail2">3. 생강맛 쿠키</label>
+          </div>
+          <label for="head2"></label>
+          <div class="test2">
+            <label for="angel-fail1">1. 악마맛 쿠키</label>
+            <label for="angel-fail2">2. 로꼬맛 쿠키</label>
+            <label for="angel-succ">3. 천사맛 쿠키</label>
+          </div>
+          <label for="head3"></label>
+          <div class="test3">
+            <label for="milk-fail1">1. 생크림맛 쿠키</label>
+            <label for="milk-succ">2. 우유맛 쿠키</label>
+            <label for="milk-fail2">3. 카이막맛 쿠키</label>
+          </div>
+          <label for="head4"></label>
+          <div class="test4">
+            <label for="moon-succ">1. 달빛술사 쿠키</label>
+            <label for="moon-fail1">2. 달빛천사 쿠키</label>
+            <label for="moon-fail2">3. 밤하늘맛 쿠키</label>
+          </div>
+          <label for="head5"></label>
+          <div class="test5">
+            <label for="spark-fail1">1. 샴페인맛 쿠키</label>
+            <label for="spark-fail2">2. 맥주맛 쿠키</label>
+            <label for="spark-succ">3. 스파클링맛 쿠키</label>
+          </div>
+          <label for="head6"></label>
+          <div class="test6">
+            <label for="princ-succ">1. 공주맛 쿠키</label>
+            <label for="princ-fail1">2. 영애맛 쿠키</label>
+            <label for="princ-fail2">3. 왕녀맛 쿠키</label>
+          </div>
+          <label for="head7"></label>
+          <div class="test7">
+            <label for="sorb-fail1">1. 죠스바맛 쿠키</label>
+            <label for="sorb-succ">2. 샤벳상어맛 쿠키</label>
+            <label for="sorb-fail2">3. oOoOOooO OoOOo</label>
+          </div>
+          <label for="head8"></label>
+          <div class="test8">
+            <label for="mint-fail1">1. 치약초코 쿠키</label>
+            <label for="mint-fail2">2. 박하초코 쿠키</label>
+            <label for="mint-succ">3. 민트초코 쿠키</label>
+          </div>
+          <label for="head9"></label>
+          <div class="test9">
+            <label for="fox-succ">1. 구미호맛 쿠키</label>
+            <label for="fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="head10"></label>
+          <div class="test10">
+            <label for="chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--정답루트2-->
+          <label for="angel2"></label>
+          <div class="angel-test2">
+            <label for="ang-angel-fail1">1. 악마맛 쿠키</label>
+            <label for="ang-angel-fail2">2. 로꼬맛 쿠키</label>
+            <label for="ang-angel-succ">3. 천사맛 쿠키</label>
+          </div>
+          <label for="angel3"></label>
+          <div class="angel-test3">
+            <label for="ang-milk-fail1">1. 생크림맛 쿠키</label>
+            <label for="ang-milk-succ">2. 우유맛 쿠키</label>
+            <label for="ang-milk-fail2">3. 카이막맛 쿠키</label>
+          </div>
+          <label for="angel4"></label>
+          <div class="angel-test4">
+            <label for="ang-moon-succ">1. 달빛술사 쿠키</label>
+            <label for="ang-moon-fail1">2. 달빛천사 쿠키</label>
+            <label for="ang-moon-fail2">3. 밤하늘맛 쿠키</label>
+          </div>
+          <label for="angel5"></label>
+          <div class="angel-test5">
+            <label for="ang-spark-fail1">1. 샴페인맛 쿠키</label>
+            <label for="ang-spark-fail2">2. 맥주맛 쿠키</label>
+            <label for="ang-spark-succ">3. 스파클링맛 쿠키</label>
+          </div>
+          <label for="angel6"></label>
+          <div class="angel-test6">
+            <label for="ang-princ-succ">1. 공주맛 쿠키</label>
+            <label for="ang-princ-fail1">2. 영애맛 쿠키</label>
+            <label for="ang-princ-fail2">3. 왕녀맛 쿠키</label>
+          </div>
+          <label for="angel7"></label>
+          <div class="angel-test7">
+            <label for="ang-sorb-fail1">1. 죠스바맛 쿠키</label>
+            <label for="ang-sorb-succ">2. 샤벳상어맛 쿠키</label>
+            <label for="ang-sorb-fail2">3. oOoOOooO OoOOo</label>
+          </div>
+          <label for="angel8"></label>
+          <div class="angel-test8">
+            <label for="ang-mint-fail1">1. 치약초코 쿠키</label>
+            <label for="ang-mint-fail2">2. 박하초코 쿠키</label>
+            <label for="ang-mint-succ">3. 민트초코 쿠키</label>
+          </div>
+          <label for="angel9"></label>
+          <div class="angel-test9">
+            <label for="ang-fox-succ">1. 구미호맛 쿠키</label>
+            <label for="ang-fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="ang-fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="angel10"></label>
+          <div class="angel-test10">
+            <label for="ang-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="ang-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="ang-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--우유 정답-->
+          <label for="milk3"></label>
+          <div class="milk-test3">
+            <label for="mk-milk-fail1">1. 생크림맛 쿠키</label>
+            <label for="mk-milk-succ">2. 우유맛 쿠키</label>
+            <label for="mk-milk-fail2">3. 카이막맛 쿠키</label>
+          </div>
+          <label for="milk4"></label>
+          <div class="milk-test4">
+            <label for="mk-moon-succ">1. 달빛술사 쿠키</label>
+            <label for="mk-moon-fail1">2. 달빛천사 쿠키</label>
+            <label for="mk-moon-fail2">3. 밤하늘맛 쿠키</label>
+          </div>
+          <label for="milk5"></label>
+          <div class="milk-test5">
+            <label for="mk-spark-fail1">1. 샴페인맛 쿠키</label>
+            <label for="mk-spark-fail2">2. 맥주맛 쿠키</label>
+            <label for="mk-spark-succ">3. 스파클링맛 쿠키</label>
+          </div>
+          <label for="milk6"></label>
+          <div class="milk-test6">
+            <label for="mk-princ-succ">1. 공주맛 쿠키</label>
+            <label for="mk-princ-fail1">2. 영애맛 쿠키</label>
+            <label for="mk-princ-fail2">3. 왕녀맛 쿠키</label>
+          </div>
+          <label for="milk7"></label>
+          <div class="milk-test7">
+            <label for="mk-sorb-fail1">1. 죠스바맛 쿠키</label>
+            <label for="mk-sorb-succ">2. 샤벳상어맛 쿠키</label>
+            <label for="mk-sorb-fail2">3. oOoOOooO OoOOo</label>
+          </div>
+          <label for="milk8"></label>
+          <div class="milk-test8">
+            <label for="mk-mint-fail1">1. 치약초코 쿠키</label>
+            <label for="mk-mint-fail2">2. 박하초코 쿠키</label>
+            <label for="mk-mint-succ">3. 민트초코 쿠키</label>
+          </div>
+          <label for="milk9"></label>
+          <div class="milk-test9">
+            <label for="mk-fox-succ">1. 구미호맛 쿠키</label>
+            <label for="mk-fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="mk-fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="milk10"></label>
+          <div class="milk-test10">
+            <label for="mk-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="mk-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="mk-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--달술 정답-->
+          <label for="moon4"></label>
+          <div class="moon-test4">
+            <label for="mn-moon-succ">1. 달빛술사 쿠키</label>
+            <label for="mn-moon-fail1">2. 달빛천사 쿠키</label>
+            <label for="mn-moon-fail2">3. 밤하늘맛 쿠키</label>
+          </div>
+          <label for="moon5"></label>
+          <div class="moon-test5">
+            <label for="mn-spark-fail1">1. 샴페인맛 쿠키</label>
+            <label for="mn-spark-fail2">2. 맥주맛 쿠키</label>
+            <label for="mn-spark-succ">3. 스파클링맛 쿠키</label>
+          </div>
+          <label for="moon6"></label>
+          <div class="moon-test6">
+            <label for="mn-princ-succ">1. 공주맛 쿠키</label>
+            <label for="mn-princ-fail1">2. 영애맛 쿠키</label>
+            <label for="mn-princ-fail2">3. 왕녀맛 쿠키</label>
+          </div>
+          <label for="moon7"></label>
+          <div class="moon-test7">
+            <label for="mn-sorb-fail1">1. 죠스바맛 쿠키</label>
+            <label for="mn-sorb-succ">2. 샤벳상어맛 쿠키</label>
+            <label for="mn-sorb-fail2">3. oOoOOooO OoOOo</label>
+          </div>
+          <label for="moon8"></label>
+          <div class="moon-test8">
+            <label for="mn-mint-fail1">1. 치약초코 쿠키</label>
+            <label for="mn-mint-fail2">2. 박하초코 쿠키</label>
+            <label for="mn-mint-succ">3. 민트초코 쿠키</label>
+          </div>
+          <label for="moon9"></label>
+          <div class="moon-test9">
+            <label for="mn-fox-succ">1. 구미호맛 쿠키</label>
+            <label for="mn-fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="mn-fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="moon10"></label>
+          <div class="moon-test10">
+            <label for="mn-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="mn-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="mn-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--꼴링 정답-->
+          <label for="spark5"></label>
+          <div class="spark-test5">
+            <label for="sp-spark-fail1">1. 샴페인맛 쿠키</label>
+            <label for="sp-spark-fail2">2. 맥주맛 쿠키</label>
+            <label for="sp-spark-succ">3. 스파클링맛 쿠키</label>
+          </div>
+          <label for="spark6"></label>
+          <div class="spark-test6">
+            <label for="sp-princ-succ">1. 공주맛 쿠키</label>
+            <label for="sp-princ-fail1">2. 영애맛 쿠키</label>
+            <label for="sp-princ-fail2">3. 왕녀맛 쿠키</label>
+          </div>
+          <label for="spark7"></label>
+          <div class="spark-test7">
+            <label for="sp-sorb-fail1">1. 죠스바맛 쿠키</label>
+            <label for="sp-sorb-succ">2. 샤벳상어맛 쿠키</label>
+            <label for="sp-sorb-fail2">3. oOoOOooO OoOOo</label>
+          </div>
+          <label for="spark8"></label>
+          <div class="spark-test8">
+            <label for="sp-mint-fail1">1. 치약초코 쿠키</label>
+            <label for="sp-mint-fail2">2. 박하초코 쿠키</label>
+            <label for="sp-mint-succ">3. 민트초코 쿠키</label>
+          </div>
+          <label for="spark9"></label>
+          <div class="spark-test9">
+            <label for="sp-fox-succ">1. 구미호맛 쿠키</label>
+            <label for="sp-fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="sp-fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="spark10"></label>
+          <div class="spark-test10">
+            <label for="sp-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="sp-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="sp-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--공주 정답-->
+          <label for="princ6"></label>
+          <div class="princ-test6">
+            <label for="pr-princ-succ">1. 공주맛 쿠키</label>
+            <label for="pr-princ-fail1">2. 영애맛 쿠키</label>
+            <label for="pr-princ-fail2">3. 왕녀맛 쿠키</label>
+          </div>
+          <label for="princ7"></label>
+          <div class="princ-test7">
+            <label for="pr-sorb-fail1">1. 죠스바맛 쿠키</label>
+            <label for="pr-sorb-succ">2. 샤벳상어맛 쿠키</label>
+            <label for="pr-sorb-fail2">3. oOoOOooO OoOOo</label>
+          </div>
+          <label for="princ8"></label>
+          <div class="princ-test8">
+            <label for="pr-mint-fail1">1. 치약초코 쿠키</label>
+            <label for="pr-mint-fail2">2. 박하초코 쿠키</label>
+            <label for="pr-mint-succ">3. 민트초코 쿠키</label>
+          </div>
+          <label for="princ9"></label>
+          <div class="princ-test9">
+            <label for="pr-fox-succ">1. 구미호맛 쿠키</label>
+            <label for="pr-fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="pr-fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="princ10"></label>
+          <div class="princ-test10">
+            <label for="pr-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="pr-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="pr-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--샤벳 정답-->
+          <label for="sorbet7"></label>
+          <div class="sorbet-test7">
+            <label for="sr-sorb-fail1">1. 죠스바맛 쿠키</label>
+            <label for="sr-sorb-succ">2. 샤벳상어맛 쿠키</label>
+            <label for="sr-sorb-fail2">3. oOoOOooO OoOOo</label>
+          </div>
+          <label for="sorbet8"></label>
+          <div class="sorbet-test8">
+            <label for="sr-mint-fail1">1. 치약초코 쿠키</label>
+            <label for="sr-mint-fail2">2. 박하초코 쿠키</label>
+            <label for="sr-mint-succ">3. 민트초코 쿠키</label>
+          </div>
+          <label for="sorbet9"></label>
+          <div class="sorbet-test9">
+            <label for="sr-fox-succ">1. 구미호맛 쿠키</label>
+            <label for="sr-fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="sr-fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="sorbet10"></label>
+          <div class="sorbet-test10">
+            <label for="sr-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="sr-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="sr-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--민초 정답-->
+          <label for="mint8"></label>
+          <div class="mint-test8">
+            <label for="mt-mint-fail1">1. 치약초코 쿠키</label>
+            <label for="mt-mint-fail2">2. 박하초코 쿠키</label>
+            <label for="mt-mint-succ">3. 민트초코 쿠키</label>
+          </div>
+          <label for="mint9"></label>
+          <div class="mint-test9">
+            <label for="mt-fox-succ">1. 구미호맛 쿠키</label>
+            <label for="mt-fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="mt-fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="mint10"></label>
+          <div class="mint-test10">
+            <label for="mt-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="mt-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="mt-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--구미호 정답-->
+          <label for="fox9"></label>
+          <div class="fox-test9">
+            <label for="fx-fox-succ">1. 구미호맛 쿠키</label>
+            <label for="fx-fox-fail1">2. 마쉬멜로맛 쿠키</label>
+            <label for="fx-fox-fail2">3. 흰여우맛 쿠키</label>
+          </div>
+          <label for="fox10"></label>
+          <div class="fox-test10">
+            <label for="fx-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="fx-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="fx-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+          <!--치케 정답-->
+          <label for="chee10"></label>
+          <div class="chee-test10">
+            <label for="ch-chee-fail1">1. 치즈소보로맛 쿠키</label>
+            <label for="ch-chee-succ">2. 치즈케이크맛 쿠키</label>
+            <label for="ch-chee-fail2">3. 치즈크럼블맛 쿠키</label>
+          </div>
+        </div>
+        <div class="timebar">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="timeout">
+          <div></div>
+        </div>
+        <div class="fire"></div>
+      </div>
+      
+</body>
+</html>
