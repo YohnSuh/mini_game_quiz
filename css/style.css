@@ -127,7 +127,7 @@ div[class*="10"] {animation: goaway 5s 36s linear both paused;}
 #mk-milk-succ:checked ~ label[for^="moon"] {visibility:visible;}
 #moon4:checked ~ .moon-test4,#moon5:checked ~ .moon-test5, #moon6:checked ~ .moon-test6,
 #moon7:checked ~ .moon-test7, #moon8:checked ~ .moon-test8, #moon9:checked ~ .moon-test9, #moon10:checked ~ .moon-test10 {visibility:visible;animation-play-state:running;}
-/* 꼴링 체크 */
+/* 스파 체크 */
 #mn-moon-succ:checked ~ label[for^="spark"] {visibility:visible;}
 #spark5:checked ~ .spark-test5, #spark6:checked ~ .spark-test6, #spark7:checked ~ .spark-test7, #spark8:checked ~ .spark-test8, #spark9:checked ~ .spark-test9, #spark10:checked ~ .spark-test10 {visibility:visible;animation-play-state:running;}
 /* 프린세스 */
