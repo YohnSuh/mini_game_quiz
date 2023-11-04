@@ -201,3 +201,7 @@ input[id*="chee-fail2"]:checked ~ .fail{animation-play-state:running;}
 @keyframes fire {100% {transform: scale(1.02);}}
 @keyframes left {100% {transform: translateX(-5px);}}
 @keyframes right {100% {transform: translateX(5px);}}
+
+@media all and (max-width: 768px) {
+    label {font-size: 12px;}
+}
